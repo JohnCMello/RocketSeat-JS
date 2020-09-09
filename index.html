@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - RocketSeat</title>
+  </head>
+
+  <body>
+    <script>
+      //Exercicio 1
+      var endereco = {
+        rua: "Rua dos Pinheiros", 
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+      };
+
+      function returnUser(){
+        let user = "O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na " + endereco.rua + " com nº " + endereco.numero + "."
+        return user
+      };
+
+      // Exercício 2
+      function even(x,y){
+        for( let num = x; num <= y; num++ ){
+          num % 2 === 0 ? console.log(num) : '' ;
+        }
+      };
+
+      //Exercício 3
+      var skills = ['JavaScript', 'ReactJS', 'React Native'];
+
+      function hasSkills(skill){
+        if (skills.indexOf(skill) === -1){
+          console.log (false)
+        } else if (skills.indexOf(skill) > -1){
+          console.log(true)
+        };
+      };
+
+      //Exercício 4
+      function experience(years){
+        switch (years){
+          case 0: 
+          console.log('Iniciante');
+          break;
+          case 1: 
+          console.log('Iniciante / Intermediario');
+          break;
+          case 2:
+          console.log('Intermediário')
+          break;
+          case 3:
+          console.log('Intermediário / Avançado')
+          break;
+          case 4:
+          console.log('Avaçado')
+          break;
+          case 5:
+          console.log('Avaçado')
+          break;
+          case 6:
+          console.log('Avaçado / Jedi Master')
+          break;
+          default:
+          console.log('Jedi Master')
+        }
+      }
+
+      //Exercício 5
+      var usuarios = [  
+        { 
+          nome: "Diego",
+          habilidades: ["Javascript", "ReactJS", "Redux"]  
+        },
+        {    
+          nome: "Gabriel",
+          habilidades: ["VueJS", "Ruby on Rails", "Elixir"]  
+        }
+      ];
+      function hasTheSkills (){
+        console.log(`O ${usuarios[0].nome} possui as habilidades: ${usuarios[0].habilidades.join(', ')}`)
+        console.log(`O ${usuarios[1].nome} possui as habilidades: ${usuarios[1].habilidades.join(', ')}`)
+      }
+    </script>  
+  </body>
+</html>
